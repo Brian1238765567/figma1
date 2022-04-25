@@ -11,7 +11,7 @@ class App extends Component {
     return (
         <div className="App">
           <Routes>
-            <Route exact path='/' element={<div><MovieBar overrides={navbarOverrides}/>    <MovieCompCollection/>   <AddMovie/>     </ div>} />
+            <Route exact path='/' element={<div><MovieBar overrides={navbarOverrides}/>    <MovieCompCollection/> <MovieComp/>  <AddMovie/>     </ div>} />
 
           </Routes>
 
