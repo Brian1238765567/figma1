@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function MovieBar(props) {
-  const { overrides, ...rest } = props;
+  const { bar, overrides, ...rest } = props;
   return (
     <Flex
       gap="20px"

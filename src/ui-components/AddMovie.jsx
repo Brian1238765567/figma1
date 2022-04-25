@@ -33,12 +33,12 @@ export default function AddMovie(props) {
   ] = useStateMutationAction("");
   const buttonOnClick = useDataStoreCreateAction({
     fields: {
+      RTscore: "87",
+      MCscore: "76",
+      IMDbscore: "7.9",
       Name: textFieldThreeZeroSevenFiveTwoEightEightZeroValue,
       image_url: textFieldThreeZeroSevenFiveTwoEightEightOneValue,
-      RTscore: "95",
-      MCscore: "67",
-      IMDbscore: "7.6",
-      Wikiurl: "google.com",
+      Wikiurl: "www.google.com",
     },
     model: Movie,
   });
@@ -213,6 +213,7 @@ export default function AddMovie(props) {
           size="default"
           isDisabled={false}
           variation="primary"
+          children="Upload"
           onClick={() => {
             buttonOnClick();
           }}

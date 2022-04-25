@@ -2,8 +2,11 @@
 
 import React, { Component } from 'react'
 import './App.css';
-import {AddMovie,MovieBar,MovieComp,MovieCompCollection} from "./ui-components";
+import {MovieBar,MovieCompCollection} from "./ui-components";
 import { Routes, Route } from 'react-router-dom'
+import CreateMovie from './CreateMovie'
+import { DataStore } from '@aws-amplify/datastore';
+import { Movie } from './models';
 
 class App extends Component {
   render() {
@@ -11,8 +14,8 @@ class App extends Component {
     return (
         <div className="App">
           <Routes>
-            <Route exact path='/' element={<div><MovieBar overrides={navbarOverrides}/>    <MovieCompCollection/> <MovieComp/>  <AddMovie/>     </ div>} />
-
+            <Route exact path='/' element={<div><MovieBar overrides={navbarOverrides}/> <MovieCompCollection/> </ div>} />
+            <Route exact path='/newmovie' element={<CreateMovie/>} />
           </Routes>
 
 

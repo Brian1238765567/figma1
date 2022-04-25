@@ -5,9 +5,12 @@
  **************************************************************************/
 
 import React from "react";
+import { Movie } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type MovieBarProps = React.PropsWithChildren<Partial<FlexProps> & {
+    bar?: Movie;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function MovieBar(props: MovieBarProps): React.ReactElement;
