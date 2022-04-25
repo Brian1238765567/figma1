@@ -5,8 +5,7 @@ import './App.css';
 import {MovieBar,MovieCompCollection} from "./ui-components";
 import { Routes, Route } from 'react-router-dom'
 import CreateMovie from './CreateMovie'
-import { DataStore } from '@aws-amplify/datastore';
-import { Movie } from './models';
+
 
 class App extends Component {
   render() {

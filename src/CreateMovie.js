@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { AddMovie,  MovieBar } from "./ui-components";
 //import { Divider, withAuthenticator } from "@aws-amplify/ui-react";
 import "./App.css";
-import { DataStore } from '@aws-amplify/datastore';
-import { Movie } from './models';
+
 
 class CreateMovie extends Component {
     render(){
