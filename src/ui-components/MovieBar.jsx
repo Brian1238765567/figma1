@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function MovieBar(props) {
   const { bar, overrides, ...rest } = props;
+  const addMovieOnClick = useNavigateAction({
+    type: "url",
+    url: "localhost:3000/newmovie",
+  });
   return (
     <Flex
       gap="20px"
@@ -134,6 +141,9 @@ export default function MovieBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Add Movie"
+          onClick={() => {
+            addMovieOnClick();
+          }}
           {...getOverrideProps(overrides, "Add Movie")}
         ></Text>
       </Flex>
