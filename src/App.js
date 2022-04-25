@@ -1,35 +1,25 @@
 
+
+import React, { Component } from 'react'
 import './App.css';
+import {AddMovie,MovieBar,MovieComp,MovieCompCollection} from "./ui-components";
+import { Routes, Route } from 'react-router-dom'
 
-import { 
-  AddMovie 
-} from './ui-components';
+class App extends Component {
+  render() {
+    const navbarOverrides = {"image": { height:"34px", src: "https://img.icons8.com/color/50/000000/car--v1.png", },};
+    return (
+        <div className="App">
+          <Routes>
+            <Route exact path='/' element={<div><MovieBar overrides={navbarOverrides}/>    <MovieCompCollection/>   <AddMovie/>     </ div>} />
 
-import { 
-  MovieBar 
-} from './ui-components';
-
-import { 
-  MovieCompCollection 
-} from './ui-components';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <MovieBar />
-        <p>
-        <MovieCompCollection />
-
-        <AddMovie />
+          </Routes>
 
 
-        </p>
-
-   
-      </header>
-    </div>
-  );
+        </div>
+    );
+}
 }
 
 export default App;
+
