@@ -1,0 +1,17 @@
+type Movie @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  RTscore: Int
+  MCscore: Int
+  IMDbscore: Float
+  Name: String
+  image_url: String
+  Wikiurl: String
+}
+
+type Home @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  adress: String
+  price: Int
+  image_url: String
+}
+ 
