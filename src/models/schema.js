@@ -13,21 +13,21 @@ export const schema = {
                 "RTscore": {
                     "name": "RTscore",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "MCscore": {
                     "name": "MCscore",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "IMDbscore": {
                     "name": "IMDbscore",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -170,5 +170,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "765d6a15689090d9c62ef5ddec0d9ffc"
+    "version": "de01f9a9e10a0cdc63633d11ef57d31b"
 };

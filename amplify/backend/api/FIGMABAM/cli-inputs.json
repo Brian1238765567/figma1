@@ -3,7 +3,7 @@
   "serviceConfiguration": {
     "apiName": "FIGMABAM",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-f8d4eb51-860b-4b89-98cb-fab73cff3f4f/amplify/backend/api/FIGMABAM/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-f4c89ee8-6c9f-4790-a4fc-a06047892f13/amplify/backend/api/FIGMABAM/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "keyDescription": "api key description",

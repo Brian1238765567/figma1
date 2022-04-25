@@ -14,9 +14,9 @@ type HomeMetaData = {
 
 export declare class Movie {
   readonly id: string;
-  readonly RTscore?: number | null;
-  readonly MCscore?: number | null;
-  readonly IMDbscore?: number | null;
+  readonly RTscore?: string | null;
+  readonly MCscore?: string | null;
+  readonly IMDbscore?: string | null;
   readonly Name?: string | null;
   readonly image_url?: string | null;
   readonly Wikiurl?: string | null;
