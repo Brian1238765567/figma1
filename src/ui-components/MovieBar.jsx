@@ -15,7 +15,7 @@ export default function MovieBar(props) {
   const { bar, overrides, ...rest } = props;
   const addMovieOnClick = useNavigateAction({
     type: "url",
-    url: "localhost:3000/newmovie",
+    url: `${"/newmovie"}${""}`,
   });
   return (
     <Flex

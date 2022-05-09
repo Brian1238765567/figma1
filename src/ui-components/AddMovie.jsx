@@ -9,6 +9,7 @@ import React from "react";
 import {
   getOverrideProps,
   useDataStoreCreateAction,
+  useNavigateAction,
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
 import { Movie } from "../models";
@@ -42,6 +43,7 @@ export default function AddMovie(props) {
     },
     model: Movie,
   });
+  const buttonOnMouseOut = useNavigateAction({ type: "url", url: "/" });
   return (
     <Flex
       gap="16px"
@@ -216,6 +218,9 @@ export default function AddMovie(props) {
           children="Upload"
           onClick={() => {
             buttonOnClick();
+          }}
+          onMouseOut={() => {
+            buttonOnMouseOut();
           }}
           {...getOverrideProps(overrides, "Button")}
         ></Button>
