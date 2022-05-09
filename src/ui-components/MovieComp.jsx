@@ -8,19 +8,19 @@
 import React from "react";
 import {
   getOverrideProps,
+  useDataStoreDeleteAction,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
+import { Movie } from "../models";
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function MovieComp(props) {
   const { MoviePoster, overrides, ...rest } = props;
-  const imageOnClick = useNavigateAction({
-    type: "url",
-    url: `${"/edit/"}${MoviePoster?.id}`,
-  });
-  const buttonOnClick = useNavigateAction({
+  const buttonThreeOneSevenZeroTwoEightOneEightOnClick = useNavigateAction({
     type: "url",
     url: MoviePoster?.Wikiurl,
   });
+  const buttonThreeZeroSixZeroTwoSevenSevenNineOnClick =
+    useDataStoreDeleteAction({ id: MoviePoster?.id, model: Movie });
   return (
     <Flex
       gap="0"
@@ -43,9 +43,6 @@ export default function MovieComp(props) {
         borderRadius="5px"
         padding="0px 0px 0px 0px"
         src={MoviePoster?.image_url}
-        onClick={() => {
-          imageOnClick();
-        }}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -83,11 +80,10 @@ export default function MovieComp(props) {
           display="flex"
           gap="0"
           direction="row"
+          width="288px"
           justifyContent="center"
           alignItems="center"
           shrink="0"
-          alignSelf="stretch"
-          objectFit="cover"
           position="relative"
           backgroundColor="rgba(0,34,102,1)"
           size="large"
@@ -95,9 +91,28 @@ export default function MovieComp(props) {
           variation="primary"
           children="More Info"
           onClick={() => {
-            buttonOnClick();
+            buttonThreeOneSevenZeroTwoEightOneEightOnClick();
           }}
-          {...getOverrideProps(overrides, "Button")}
+          {...getOverrideProps(overrides, "Button31702818")}
+        ></Button>
+        <Button
+          display="flex"
+          gap="0"
+          direction="row"
+          width="288px"
+          justifyContent="center"
+          alignItems="center"
+          shrink="0"
+          position="relative"
+          backgroundColor="rgba(0,34,102,1)"
+          size="large"
+          isDisabled={false}
+          variation="primary"
+          children="Delete Movie"
+          onClick={() => {
+            buttonThreeZeroSixZeroTwoSevenSevenNineOnClick();
+          }}
+          {...getOverrideProps(overrides, "Button30602779")}
         ></Button>
       </Flex>
     </Flex>
