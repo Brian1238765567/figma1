@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from "react-dom/client";
 import './index.css';
 import App from './App';
-import Amplify from 'aws-amplify';
+import Amplify from "@aws-amplify/core";
 import "@aws-amplify/ui-react/styles.css";
 import {AmplifyProvider} from "@aws-amplify/ui-react";
 import awsConfig from './aws-exports';
@@ -14,10 +14,11 @@ Amplify.configure(awsConfig);
 
 root.render(
     <React.StrictMode>
-       <BrowserRouter>
-        <AmplifyProvider>
+        <BrowserRouter>
+         <AmplifyProvider>
             <App/>
-        </AmplifyProvider>
+         </AmplifyProvider>
         </BrowserRouter>
-    </React.StrictMode>
+    </React.StrictMode>,
+    
 );

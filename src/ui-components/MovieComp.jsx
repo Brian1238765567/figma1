@@ -13,6 +13,10 @@ import {
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function MovieComp(props) {
   const { MoviePoster, overrides, ...rest } = props;
+  const imageOnClick = useNavigateAction({
+    type: "url",
+    url: `${"/edit"}${MoviePoster?.id}`,
+  });
   const buttonOnClick = useNavigateAction({
     type: "url",
     url: MoviePoster?.Wikiurl,
@@ -39,6 +43,9 @@ export default function MovieComp(props) {
         borderRadius="5px"
         padding="0px 0px 0px 0px"
         src={MoviePoster?.image_url}
+        onClick={() => {
+          imageOnClick();
+        }}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
