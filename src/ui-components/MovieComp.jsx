@@ -15,7 +15,7 @@ export default function MovieComp(props) {
   const { MoviePoster, overrides, ...rest } = props;
   const imageOnClick = useNavigateAction({
     type: "url",
-    url: `${"/edit"}${MoviePoster?.id}`,
+    url: `${"/edit/"}${MoviePoster?.id}`,
   });
   const buttonOnClick = useNavigateAction({
     type: "url",
