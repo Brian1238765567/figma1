@@ -13,10 +13,9 @@ import {
 import { Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function MovieBar(props) {
   const { bar, overrides, ...rest } = props;
-  const addMovieOnClick = useNavigateAction({
-    type: "url",
-    url: `${"/newmovie"}${""}`,
-  });
+  const homeOnClick = useNavigateAction({ type: "url", url: "/" });
+  const moviesOnClick = useNavigateAction({ type: "url", url: "/" });
+  const addMovieOnClick = useNavigateAction({ type: "url", url: "/newmovie" });
   return (
     <Flex
       gap="20px"
@@ -105,6 +104,9 @@ export default function MovieBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Home"
+          onClick={() => {
+            homeOnClick();
+          }}
           {...getOverrideProps(overrides, "Home")}
         ></Text>
         <Text
@@ -123,6 +125,9 @@ export default function MovieBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Movies"
+          onClick={() => {
+            moviesOnClick();
+          }}
           {...getOverrideProps(overrides, "Movies")}
         ></Text>
         <Text

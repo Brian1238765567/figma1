@@ -21,6 +21,7 @@ export { default as SocialA } from "./SocialA";
 export { default as CardC } from "./CardC";
 export { default as SideBar } from "./SideBar";
 export { default as EditProfile } from "./EditProfile";
+export { default as UiEdit } from "./UiEdit";
 export { default as SocialB } from "./SocialB";
 export { default as CardG } from "./CardG";
 export { default as FormCheckout } from "./FormCheckout";
