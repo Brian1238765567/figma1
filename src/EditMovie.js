@@ -25,6 +25,7 @@ class EditMovie extends Component {
         }
         pullData()
       }, []) 
+      
     return (
       <div><header className="App-header">
         <MovieBar />
