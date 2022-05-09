@@ -5,7 +5,7 @@ import './App.css';
 import {MovieBar,MovieCompCollection} from "./ui-components";
 import { Routes, Route } from 'react-router-dom'
 import CreateMovie from './CreateMovie'
-
+import EditMovie from './EditMovie';
 
 class App extends Component {
   render() {
@@ -15,6 +15,7 @@ class App extends Component {
           <Routes>
             <Route exact path='/' element={<div><MovieBar overrides={navbarOverrides}/> <MovieCompCollection/> </ div>} />
             <Route exact path='/newmovie' element={<CreateMovie/>} />
+            <Route exact path='/edit/:cid' element={<EditMovie/>} />
           </Routes>
 
 
