@@ -10,6 +10,11 @@
       "StackName": "amplify-figmabam-staging-175908",
       "StackId": "arn:aws:cloudformation:us-east-1:740029002153:stack/amplify-figmabam-staging-175908/c598b630-aa09-11ec-8df1-1288aac3773f",
       "AmplifyAppId": "drhejwc5scbq0"
+    },
+    "categories": {
+      "auth": {
+        "FIGMABAM": {}
+      }
     }
   }
 }
