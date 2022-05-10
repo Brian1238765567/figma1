@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import './App.css';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import {MovieBar,MovieCompCollection} from "./ui-components";
 import { Routes, Route } from 'react-router-dom'
 import CreateMovie from './CreateMovie'
@@ -24,5 +25,4 @@ class App extends Component {
 }
 }
 
-export default App;
-
+export default withAuthenticator(App);
